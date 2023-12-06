@@ -1,0 +1,11 @@
+  <div class="container mt-3">
+    <h1>Ask your coach anything:</h1>
+
+    <%= form_with(url: "/answers", method: "post", local: true) do |form| %>
+      <div class="mb-3">
+        <%= form.label :question, class: "form-label" %>
+        <%= form.text_field :question, class: "form-control" %>
+      </div>
+      <%= form.submit "Ask!", class: "btn btn-primary" %>
+    <% end %>
+  </div>
